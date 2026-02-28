@@ -14,8 +14,7 @@ if uploaded_file:
     st.write("Data Preview:", df.head(3)) # Shows the user the bot sees the data
 
     # 2. Connect to the LLM (using Secrets for safety)
-    llm = ChatOpenAI(model="arcee-ai/trinity-large-preview:free", api_key=st.secrets["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"])
-
+    llm = ChatOpenAI(model="arcee-ai/trinity-large-preview:free", api_key=st.secrets["MY_API_KEY"])
     # 3. Initialize the Agent
     agent = create_pandas_dataframe_agent(llm, df, verbose=True, allow_dangerous_code=True)
 
