@@ -16,12 +16,11 @@ if uploaded_file:
 
     # 2. Setup the Brain (using the NICKNAME 'MY_API_KEY')
     # Use base_url for OpenRouter/Arcee if needed
-    llm = ChatOpenAI(
-        model="openai/gpt-oss-120b:free", 
-        api_key=st.secrets["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"],
-        base_url="https://openrouter.ai/api/v1"
-    )
-
+   llm = ChatOpenAI(
+    model="arcee-ai/trinity-large-preview:free", 
+    api_key=st.secrets["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"], 
+    base_url="https://openrouter.ai/api/v1"
+)
     # 3. Create the Agent
     agent = create_pandas_dataframe_agent(llm, df, verbose=True, allow_dangerous_code=True)
 
