@@ -17,7 +17,7 @@ if uploaded_file:
     # 2. Setup the Brain (using the NICKNAME 'MY_API_KEY')
     # Use base_url for OpenRouter/Arcee if needed
     llm = ChatOpenAI(
-        model="arcee-ai/trinity-large-preview:free", 
+        model="openai/gpt-oss-120b:free", 
         api_key=st.secrets["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"],
         base_url="https://openrouter.ai/api/v1"
     )
