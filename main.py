@@ -18,7 +18,7 @@ if uploaded_file:
     # Use base_url for OpenRouter/Arcee if needed
     llm = ChatOpenAI(
         model="openai/gpt-oss-120b:free", 
-        api_key=st.secrets["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"],
+        api_key=st.secrets["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"],
         base_url="https://openrouter.ai/api/v1"
     )
 
